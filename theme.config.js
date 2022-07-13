@@ -1,262 +1,132 @@
 import { useRouter } from "next/router";
 
 const Logo = ({ height }) => (
-  <svg height={height} viewBox="0 0 291 69" fill="none">
-    <path
-      d="M0 36.53c.07 17.6 14.4 32.01 32.01 32.01a32.05 32.05 0 0032.01-32V32a13.2 13.2 0 0123.4-8.31h20.7A32.07 32.07 0 0077.2 0a32.05 32.05 0 00-32 32.01v4.52A13.2 13.2 0 0132 49.71a13.2 13.2 0 01-13.18-13.18 3.77 3.77 0 00-3.77-3.77H3.76A3.77 3.77 0 000 36.53zM122.49 68.54a32.14 32.14 0 01-30.89-23.7h20.67a13.16 13.16 0 0023.4-8.3V32A32.05 32.05 0 01167.68 0c17.43 0 31.64 14 32 31.33l.1 5.2a13.2 13.2 0 0023.4 8.31h20.7a32.07 32.07 0 01-30.91 23.7c-17.61 0-31.94-14.42-32.01-32l-.1-4.7v-.2a13.2 13.2 0 00-13.18-12.81 13.2 13.2 0 00-13.18 13.18v4.52a32.05 32.05 0 01-32.01 32.01zM247.94 23.7a13.16 13.16 0 0123.4 8.31 3.77 3.77 0 003.77 3.77h11.3a3.77 3.77 0 003.76-3.77A32.05 32.05 0 00258.16 0a32.07 32.07 0 00-30.92 23.7h20.7z"
-      fill="currentColor"
-    />
-  </svg>
+    <svg
+        viewBox="0 0 200 200"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{
+            fillRule: 'evenodd',
+            clipRule: 'evenodd',
+            strokeLinejoin: 'round',
+            strokeMiterlimit: 2
+        }}
+        height={height * 2}
+    >
+        <path
+            d="M100,0.078c-27.167,0 -30.583,0.125 -41.25,0.584c-10.625,0.5 -17.917,2.208 -24.25,4.666c-6.672,2.513 -12.716,6.452 -17.708,11.542c-5.09,4.993 -9.029,11.036 -11.542,17.708c-2.5,6.334 -4.167,13.625 -4.667,24.25c-0.458,10.667 -0.583,14.084 -0.583,41.25c0,27.084 0.125,30.542 0.583,41.167c0.5,10.667 2.209,17.917 4.667,24.292c2.513,6.672 6.452,12.715 11.542,17.708c4.992,5.09 11.036,9.029 17.708,11.542c6.333,2.458 13.625,4.166 24.25,4.625c10.667,0.5 14.083,0.583 41.25,0.583c27.083,-0 30.542,-0.083 41.167,-0.583c10.666,-0.5 17.916,-2.167 24.291,-4.625c6.672,-2.513 12.716,-6.452 17.709,-11.542c5.089,-4.993 9.028,-11.036 11.541,-17.708c2.459,-6.375 4.167,-13.625 4.625,-24.292c0.5,-10.625 0.584,-14.042 0.584,-41.208c-0,-27.125 -0.084,-30.542 -0.584,-41.209c-0.5,-10.625 -2.166,-17.916 -4.625,-24.25c-2.513,-6.672 -6.452,-12.715 -11.541,-17.708c-4.993,-5.09 -11.037,-9.029 -17.709,-11.542c-6.375,-2.5 -13.625,-4.166 -24.291,-4.666c-13.714,-0.593 -27.442,-0.788 -41.167,-0.584Zm0,18c26.667,0 29.833,0.125 40.375,0.584c9.75,0.458 15,2.083 18.542,3.458c4.666,1.792 8,3.958 11.5,7.5c3.324,3.212 5.886,7.127 7.5,11.458c1.333,3.542 3,8.834 3.416,18.584c0.5,10.541 0.584,13.708 0.584,40.416c-0,26.667 -0.084,29.834 -0.584,40.375c-0.416,9.75 -2.083,15 -3.416,18.542c-1.608,4.346 -4.171,8.276 -7.5,11.5c-3.224,3.329 -7.154,5.892 -11.5,7.5c-3.5,1.333 -8.792,3 -18.542,3.417c-10.542,0.5 -13.75,0.583 -40.417,0.583c-26.666,-0 -29.833,-0.083 -40.416,-0.583c-9.709,-0.417 -15,-2.084 -18.542,-3.417c-4.346,-1.608 -8.276,-4.171 -11.5,-7.5c-3.329,-3.224 -5.892,-7.154 -7.5,-11.5c-1.333,-3.5 -2.958,-8.792 -3.417,-18.542c-0.587,-13.463 -0.781,-26.941 -0.583,-40.416c0,-26.667 0.125,-29.834 0.583,-40.417c0.459,-9.708 2.084,-15 3.459,-18.542c1.607,-4.346 4.171,-8.276 7.5,-11.5c3.211,-3.324 7.127,-5.886 11.458,-7.5c3.542,-1.333 8.833,-2.958 18.583,-3.416c10.542,-0.459 13.709,-0.584 40.417,-0.584Zm0,30.625c-28.161,0 -51.333,23.173 -51.333,51.334c-0,28.16 23.172,51.333 51.333,51.333c28.161,-0 51.333,-23.173 51.333,-51.333c0,-28.161 -23.172,-51.334 -51.333,-51.334Zm0,84.709c-18.286,-0 -33.333,-15.048 -33.333,-33.334c-0,-18.286 15.047,-33.333 33.333,-33.333c18.286,-0 33.333,15.047 33.333,33.333c0,18.286 -15.047,33.334 -33.333,33.334Zm65.333,-86.667c0,-6.583 -5.417,-12 -12,-12c-6.583,-0 -12,5.417 -12,12c0,6.583 5.417,12 12,12c6.583,-0 12,-5.417 12,-12Z"
+            style={{ fill: 'url(#_Linear1)', fillRule: 'nonzero' }}
+        />
+        <defs>
+            <linearGradient
+                id="_Linear1"
+                x1="0"
+                y1="0"
+                x2="1"
+                y2="0"
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="matrix(199.917,0,0,199.995,0,99.9975)"
+            >
+                <stop offset="0" style={{ stopColor: '#a955f7', stopOpacity: 1 }} />
+                <stop offset="1" style={{ stopColor: '#eb489b', stopOpacity: 1 }} />
+            </linearGradient>
+        </defs>
+    </svg>
 );
-
-const Vercel = ({ height = 20 }) => (
-  <svg height={height} viewBox="0 0 283 64" fill="none">
-    <path
-      fill="currentColor"
-      d="M141.04 16c-11.04 0-19 7.2-19 18s8.96 18 20 18c6.67 0 12.55-2.64 16.19-7.09l-7.65-4.42c-2.02 2.21-5.09 3.5-8.54 3.5-4.79 0-8.86-2.5-10.37-6.5h28.02c.22-1.12.35-2.28.35-3.5 0-10.79-7.96-17.99-19-17.99zm-9.46 14.5c1.25-3.99 4.67-6.5 9.45-6.5 4.79 0 8.21 2.51 9.45 6.5h-18.9zM248.72 16c-11.04 0-19 7.2-19 18s8.96 18 20 18c6.67 0 12.55-2.64 16.19-7.09l-7.65-4.42c-2.02 2.21-5.09 3.5-8.54 3.5-4.79 0-8.86-2.5-10.37-6.5h28.02c.22-1.12.35-2.28.35-3.5 0-10.79-7.96-17.99-19-17.99zm-9.45 14.5c1.25-3.99 4.67-6.5 9.45-6.5 4.79 0 8.21 2.51 9.45 6.5h-18.9zM200.24 34c0 6 3.92 10 10 10 4.12 0 7.21-1.87 8.8-4.92l7.68 4.43c-3.18 5.3-9.14 8.49-16.48 8.49-11.05 0-19-7.2-19-18s7.96-18 19-18c7.34 0 13.29 3.19 16.48 8.49l-7.68 4.43c-1.59-3.05-4.68-4.92-8.8-4.92-6.07 0-10 4-10 10zm82.48-29v46h-9V5h9zM36.95 0L73.9 64H0L36.95 0zm92.38 5l-27.71 48L73.91 5H84.3l17.32 30 17.32-30h10.39zm58.91 12v9.69c-1-.29-2.06-.49-3.2-.49-5.81 0-10 4-10 10V51h-9V17h9v9.2c0-5.08 5.91-9.2 13.2-9.2z"
-    />
-  </svg>
-);
-
-const TITLE_WITH_TRANSLATIONS = {
-  "en-US": "React Hooks for Data Fetching",
-  "zh-CN": "用于数据请求的 React Hooks 库",
-  "es-ES": "Biblioteca React Hooks para la obtención de datos",
-  "pt-BR": " React Hooks para Data Fetching",
-  ja: "データ取得のための React Hooks ライブラリ",
-  ko: "데이터 가져오기를 위한 React Hooks",
-  ru: "React хуки для выборки данных",
-};
-
-const FEEDBACK_LINK_WITH_TRANSLATIONS = {
-  "en-US": "Question? Give us feedback →",
-  "zh-CN": "有疑问？给我们反馈 →",
-  "pt-BR": "Dúvidas? Nos dê feedback →",
-};
 
 export default {
-  projectLink: "https://github.com/vercel/swr",
-  docsRepositoryBase: "https://github.com/vercel/swr-site/blob/master/pages",
-  titleSuffix: " – SWR",
-  search: true,
-  unstable_flexsearch: true,
-  floatTOC: true,
-  feedbackLink: () => {
-    const { locale } = useRouter();
-    return (
-      FEEDBACK_LINK_WITH_TRANSLATIONS[locale] ||
-      FEEDBACK_LINK_WITH_TRANSLATIONS["en-US"]
-    );
-  },
-  feedbackLabels: "feedback",
-  logo: () => {
-    const { locale } = useRouter();
-    return (
-      <>
-        <Logo height={12} />
-        <span
-          className="mx-2 font-extrabold hidden md:inline select-none"
-          title={"SWR: " + (TITLE_WITH_TRANSLATIONS[locale] || "")}
-        >
-          SWR
+    projectLink: "https://github.com/itroger/doc",
+    docsRepositoryBase: "https://github.com/itroger/doc",
+    titleSuffix: " – 文档",
+    search: true,
+    unstable_flexsearch: true,
+    floatTOC: true,
+    feedbackLabels: "feedback",
+    logo: () => {
+        return (
+            <>
+                <Logo height={12} />
+                <span
+                    className="mx-2 font-extrabold hidden md:inline select-none"
+                    title=""
+                >
+          文档
         </span>
-      </>
-    );
-  },
-  head: ({ title, meta }) => {
-    const { route } = useRouter();
+            </>
+        );
+    },
+    head: ({ title, meta }) => {
+        const { route } = useRouter();
 
-    const ogImage =
-      meta.image ||
-      `https://swr-card.vercel.app${
-        /\/index\.+/.test(route) ? "" : "?title=" + encodeURIComponent(title)
-      }`;
+        const ogImage =
+            meta.image ||
+            `https://swr-card.vercel.app${
+                /\/index\.+/.test(route) ? "" : "?title=" + encodeURIComponent(title)
+            }`;
 
-    return (
-      <>
-        {/* Favicons, meta */}
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon/favicon-16x16.png"
-        />
-        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
-        <link
-          rel="mask-icon"
-          href="/favicon/safari-pinned-tab.svg"
-          color="#000000"
-        />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta httpEquiv="Content-Language" content="en" />
-        <meta
-          name="description"
-          content={
-            meta.description ||
-            "SWR is a React Hooks library for data fetching. SWR first returns the data from cache (stale), then sends the fetch request (revalidate), and finally comes with the up-to-date data again."
-          }
-        />
-        <meta
-          name="og:description"
-          content={
-            meta.description ||
-            "SWR is a React Hooks library for data fetching. SWR first returns the data from cache (stale), then sends the fetch request (revalidate), and finally comes with the up-to-date data again."
-          }
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@vercel" />
-        <meta name="twitter:image" content={ogImage} />
-        <meta
-          name="og:title"
-          content={
-            title ? title + " – SWR" : "SWR: React Hooks for Data Fetching"
-          }
-        />
-        <meta name="og:image" content={ogImage} />
-        <meta name="apple-mobile-web-app-title" content="SWR" />
-      </>
-    );
-  },
-  footerEditLink: ({ locale }) => {
-    switch (locale) {
-      case "zh-CN":
-        return "在 GitHub 上编辑本页 →";
-      case "es-ES":
-        return "Edite esta página en GitHub →";
-      case "pt-BR":
-        return "Edite essa página no GitHub →";
-      case "ja":
-        return "Github で編集する →";
-      case "ko":
-        return "Github에서 이 페이지 편집하기 →";
-      case "ru":
-        return "Редактировать на GitHub →";
-      default:
-        return "Edit this page on GitHub →";
-    }
-  },
-  footerText: ({ locale }) => {
-    switch (locale) {
-      case "zh-CN":
         return (
-          <a
-            href="https://vercel.com/?utm_source=swr_zh-cn"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center no-underline text-current font-semibold"
-          >
-            <span className="mr-2">由</span>
-            <span className="mr-2">
-              <Vercel />
-            </span>
-            驱动
-          </a>
+            <>
+                {/* Favicons, meta */}
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="/favicon/apple-touch-icon.png"
+                />
+                <link
+                    rel="icon"
+                    type="image/png"
+                    sizes="32x32"
+                    href="/favicon/favicon-32x32.png"
+                />
+                <link
+                    rel="icon"
+                    type="image/png"
+                    sizes="16x16"
+                    href="/favicon/favicon-16x16.png"
+                />
+                <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+                <link rel="manifest" href="/favicon/site.webmanifest" />
+                <link
+                    rel="mask-icon"
+                    href="/favicon/safari-pinned-tab.svg"
+                    color="#000000"
+                />
+                <meta name="msapplication-TileColor" content="#ffffff" />
+                <meta httpEquiv="Content-Language" content="en" />
+                <meta
+                    name="description"
+                    content={
+                        meta.description ||
+                        "SWR is a React Hooks library for data fetching. SWR first returns the data from cache (stale), then sends the fetch request (revalidate), and finally comes with the up-to-date data again."
+                    }
+                />
+                <meta
+                    name="og:description"
+                    content={
+                        meta.description ||
+                        "SWR is a React Hooks library for data fetching. SWR first returns the data from cache (stale), then sends the fetch request (revalidate), and finally comes with the up-to-date data again."
+                    }
+                />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@vercel" />
+                <meta name="twitter:image" content={ogImage} />
+                <meta
+                    name="og:title"
+                    content={
+                        title ? title + " – SWR" : "SWR: React Hooks for Data Fetching"
+                    }
+                />
+                <meta name="og:image" content={ogImage} />
+                <meta name="apple-mobile-web-app-title" content="SWR" />
+            </>
         );
-      case "es-ES":
-        return (
-          <a
-            href="https://vercel.com/?utm_source=swr_es-es"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center no-underline text-current font-semibold"
-          >
-            <span className="mr-2">Desarrollado por</span>
-            <span className="mr-2">
-              <Vercel />
-            </span>
-          </a>
-        );
-      case "pt-BR":
-        return (
-          <a
-            href="https://vercel.com/?utm_source=swr_es-es"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center no-underline text-current font-semibold"
-          >
-            <span className="mr-2">Desenvolvido por</span>
-            <span className="mr-2">
-              <Vercel />
-            </span>
-          </a>
-        );
-      case "ja":
-        return (
-          <a
-            href="https://vercel.com/?utm_source=swr_ja"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center no-underline text-current font-semibold"
-          >
-            <span className="mr-2">提供</span>
-            <span className="mr-2">
-              <Vercel />
-            </span>
-          </a>
-        );
-      case "ko":
-        return (
-          <a
-            href="https://vercel.com/?utm_source=swr_ko"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center no-underline text-current font-semibold"
-          >
-            <span className="mr-2">Powered by</span>
-            <span className="mr-2">
-              <Vercel />
-            </span>
-          </a>
-        );
-      case "ru":
-        return (
-          <a
-            href="https://vercel.com/?utm_source=swr_ru"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center no-underline text-current font-semibold"
-          >
-            <span className="mr-2">Работает на</span>
-            <span className="mr-2">
-              <Vercel />
-            </span>
-          </a>
-        );
-      default:
-        return (
-          <a
-            href="https://vercel.com/?utm_source=swr"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center no-underline text-current font-semibold"
-          >
-            <span className="mr-1">Powered by</span>
-            <span>
-              <Vercel />
-            </span>
-          </a>
-        );
-    }
-  },
-  i18n: [
-    { locale: "en-US", text: "English" },
-    { locale: "es-ES", text: "Español" },
-    { locale: "zh-CN", text: "简体中文" },
-    { locale: "pt-BR", text: "Português Brasileiro" },
-    { locale: "ja", text: "日本語" },
-    { locale: "ko", text: "한국어" },
-    { locale: "ru", text: "Русский" },
-  ],
+    },
+    footerText: ( ) => <a
+        href="/"
+        rel="noopener"
+        className="inline-flex items-center gap-2 no-underline text-current font-semibold"
+    >
+        <Logo height={15} />
+       <span>Designed by itroger</span>
+    </a>,
 };
